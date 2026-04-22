@@ -7,11 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2196F3; /* Bright, clean medical blue */
+            --primary-color: #2196F3;
             --dark-blue: #1565C0;
             --light-bg: #F8FBFE;
             --text-color: #333;
-            --card-border: #E3F2FD;
         }
 
         body {
@@ -22,7 +21,6 @@
             line-height: 1.7;
         }
 
-        /* Hero Header Section */
         header {
             background-color: #FFF;
             padding: 3rem 1.5rem;
@@ -31,27 +29,23 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.03);
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            color: var(--dark-blue);
-            font-weight: 700;
+        header h1 { margin: 0; font-size: 2.2rem; color: var(--dark-blue); font-weight: 700; }
+        header p { margin-top: 10px; color: #666; font-size: 1.1rem; }
+        
+        .prepared-by {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f0f7ff;
+            display: inline-block;
+            border-radius: 12px;
+            border: 1px solid #d1e9ff;
+            text-align: left;
         }
+        .prepared-by b { display: block; color: var(--dark-blue); margin-bottom: 10px; border-bottom: 1px solid #d1e9ff; padding-bottom: 5px; }
+        .prepared-by div { font-size: 1.05rem; line-height: 1.8; color: #444; }
 
-        header p {
-            margin-top: 10px;
-            font-size: 1.1rem;
-            font-weight: 300;
-            color: #666;
-        }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
 
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        /* Professional Card System */
         .card {
             background: #FFF;
             border-radius: 12px;
@@ -59,60 +53,14 @@
             margin-bottom: 2rem;
             border: 1px solid #eee;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.2s ease;
         }
 
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
+        h2 { color: var(--primary-color); border-bottom: 3px solid #eee; padding-bottom: 12px; margin-top: 0; }
+        h3 { color: var(--dark-blue); margin-top: 1.8rem; }
+        ul { padding-left: 1.5rem; list-style-type: none; }
+        li { margin-bottom: 1.2rem; position: relative; padding-left: 1.2rem; }
+        li::before { content: '•'; color: var(--primary-color); font-size: 1.5rem; position: absolute; left: 0; top: -0.2rem; }
 
-        /* Accented Headings */
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 3px solid #eee;
-            padding-bottom: 12px;
-            margin-top: 0;
-            position: relative;
-        }
-        
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 70px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        h3 {
-            color: var(--dark-blue);
-            margin-top: 1.8rem;
-            font-size: 1.3rem;
-        }
-
-        ul {
-            padding-left: 1.5rem;
-            list-style-type: none;
-        }
-
-        li {
-            margin-bottom: 1.2rem;
-            position: relative;
-            padding-left: 1.2rem;
-        }
-        
-        li::before {
-            content: '•';
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0;
-            top: -0.2rem;
-        }
-
-        /* Quote/Message styling */
         .message-box {
             background-color: #E3F2FD;
             border-left: 6px solid var(--primary-color);
@@ -120,51 +68,13 @@
             border-radius: 10px;
             font-style: italic;
             margin: 2rem 0;
-            color: #1A237E;
         }
 
-        /* Clean list display for guidelines */
-        .card li ul {
-            padding-left: 1rem;
-            margin-top: 0.8rem;
-            background-color: #fafafa;
-            border-radius: 8px;
-            padding: 1rem 1rem 1rem 2.5rem;
-            border-left: 3px solid #eee;
-        }
-
-        .card li ul li {
-            margin-bottom: 0.6rem;
-            font-size: 0.95rem;
-        }
+        .footer { text-align: center; padding: 3rem 1rem; color: #888; font-size: 0.9rem; border-top: 1px solid #eee; margin-top: 4rem; }
         
-        .card li ul li::before {
-            content: '▫️';
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            color: #888;
-            font-size: 0.9rem;
-            border-top: 1px solid #eee;
-            margin-top: 4rem;
-        }
-
-        .highlight-text {
-            color: var(--dark-blue);
-            font-weight: 700;
-        }
-
-        /* Mobile Responsive Adjustments */
         @media (max-width: 600px) {
             header h1 { font-size: 1.7rem; }
             .card { padding: 1.5rem; }
-            h2 { font-size: 1.4rem; }
-            ul { padding-left: 1rem; }
-            li { font-size: 0.95rem; }
         }
     </style>
 </head>
@@ -172,130 +82,60 @@
 
 <header>
     <h1>Infection Control Nursing Platform</h1>
-    <p>Empowering healthcare professionals for patient & staff safety</p>
+    <p>Empowering healthcare professionals for safety</p>
+    
+    <div class="prepared-by">
+        <b>Prepared by:</b>
+        <div>
+            • فوز سعد الظفيري <br>
+            • ريماس محمد الشحيتان <br>
+            • غادة علي المطيري <br>
+            • رانيا عسيري <br>
+            • انوار محمد
+        </div>
+    </div>
 </header>
 
 <div class="container">
     
     <div class="card">
         <h2>Welcome</h2>
-        <p>This platform is designed to support nurses in preventing and controlling infections in healthcare settings to ensure patient and staff safety. Infection control is an essential part of nursing practice.</p>
+        <p>This platform is designed to support nurses in preventing and controlling infections in healthcare settings to ensure patient and staff safety.</p>
         <div class="message-box">
             "Proper adherence to guidelines helps save lives and improve healthcare quality."
         </div>
     </div>
 
     <div class="card">
-        <h2>About Infection Control</h2>
-        <p>Infection control refers to the policies and procedures used to reduce the spread of infections in hospitals and healthcare environments.</p>
-        
-        <h3>Importance:</h3>
+        <h2>Guidelines</h2>
+        <h3>1. Hand Hygiene</h3>
         <ul>
-            <li>Protects patients and healthcare workers</li>
-            <li>Reduces hospital-acquired infections (HAIs)</li>
-            <li>Improves quality of care</li>
+            <li>Wash hands before and after patient contact</li>
+            <li>Use alcohol-based hand sanitizers</li>
         </ul>
-    </div>
-
-    <div class="card">
-        <h2>Key Guidelines</h2>
-        
+        <h3>2. PPE</h3>
         <ul>
-            <li>
-                <span class="highlight-text">Hand Hygiene</span>
-                <ul>
-                    <li>Wash hands before and after patient contact</li>
-                    <li>Use alcohol-based hand sanitizers</li>
-                </ul>
-            </li>
-            <li>
-                <span class="highlight-text">Personal Protective Equipment (PPE)</span>
-                <ul>
-                    <li>Use gloves, masks, and gowns when necessary</li>
-                    <li>Follow standard precautions</li>
-                </ul>
-            </li>
-            <li>
-                <span class="highlight-text">Sterilization and Disinfection</span>
-                <ul>
-                    <li>Properly clean and disinfect medical equipment</li>
-                    <li>Follow hospital protocols</li>
-                </ul>
-            </li>
-            <li>
-                <span class="highlight-text">Safe Injection Practices</span>
-                <ul>
-                    <li>Use sterile equipment</li>
-                    <li>Never reuse needles</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Common Infections</h2>
-        <ul>
-            <li>Urinary Tract Infections (UTI)</li>
-            <li>Surgical Site Infections (SSI)</li>
-            <li>Respiratory infections</li>
-            <li>Bloodstream infections</li>
+            <li>Use gloves, masks, and gowns when necessary</li>
+            <li>Follow standard precautions</li>
         </ul>
     </div>
 
     <div class="card">
         <h2>Nurses’ Compliance</h2>
         <p>Compliance refers to how well nurses follow infection control guidelines.</p>
-        
-        <h3>Factors affecting compliance:</h3>
+        <h3>Factors:</h3>
         <ul>
             <li>Lack of training</li>
             <li>Work overload</li>
             <li>Limited resources</li>
-        </ul>
-
-        <h3>Ways to improve compliance:</h3>
-        <ul>
-            <li>Continuous education and training</li>
-            <li>Monitoring and evaluation</li>
-            <li>Availability of supplies</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Self-Assessment</h2>
-        <p class="highlight-text">Ask yourself:</p>
-        <ul>
-            <li>Do I perform hand hygiene regularly?</li>
-            <li>Do I use PPE correctly?</li>
-            <li>Do I follow infection control protocols?</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Resources</h2>
-        <ul>
-            <li>World Health Organization (WHO) guidelines</li>
-            <li>Centers for Disease Control and Prevention (CDC) resources</li>
-            <li>Hospital infection control policies</li>
         </ul>
     </div>
 
 </div>
 
 <div class="footer">
-    &copy; 2026 Infection Control Nursing Platform | For healthcare educational purposes
+    &copy; 2026 Nursing Project | Academic Excellence
 </div>
 
-<div class="card" style="text-align: center; border-right: none; border-top: 5px solid var(--primary-color);">
-        <h2>Prepared By:</h2>
-        <p style="font-size: 1.2rem; font-weight: bold; color: var(--dark-blue);"> فوز سعد الظفيري
-        
-ريماس محمد الشحيتان 
-غادة علي المطيري 
-ايرانيا عسيري 
-انوار محمد <br>
- <br>
-        </p>
-        <p>Nursing Department | Class of 2026</p>
-    </div> </body>
+</body>
 </html>
