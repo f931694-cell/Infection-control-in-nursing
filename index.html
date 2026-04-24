@@ -23,25 +23,35 @@
 
         header {
             background-color: #FFF;
-            padding: 90px 20px 30px 20px; 
+            padding: 20px 20px 40px 20px; 
             text-align: center;
             border-bottom: 5px solid var(--primary-color);
             box-shadow: 0 4px 6px rgba(0,0,0,0.03);
-            position: relative;
+        }
+
+        /* تعديل الشعارات لتكون متناسقة وغير متداخلة مع الكلام */
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto 20px auto;
         }
 
         .logo-uhb, .logo-nursing {
-            position: absolute;
-            top: 15px;
-            height: 75px;
+            height: 70px;
             width: auto;
             object-fit: contain;
         }
 
-        .logo-uhb { left: 20px; }
-        .logo-nursing { right: 20px; }
+        header h1 { 
+            margin: 15px 0 0 0; 
+            font-size: 2.2rem; 
+            color: var(--dark-blue); 
+            font-weight: 700;
+            clear: both;
+        }
 
-        header h1 { margin: 0; font-size: 2.2rem; color: var(--dark-blue); font-weight: 700; }
         header p { color: #666; margin-top: 10px; font-size: 1.1rem; }
         
         .prepared-by {
@@ -101,9 +111,8 @@
         .footer { text-align: center; padding: 3rem 1rem; color: #888; font-size: 0.9rem; border-top: 1px solid #eee; margin-top: 4rem; }
         
         @media (max-width: 768px) {
-            header { padding: 80px 10px 25px 10px; }
-            .logo-uhb, .logo-nursing { height: 55px; }
-            header h1 { font-size: 1.6rem; }
+            .logo-uhb, .logo-nursing { height: 50px; }
+            header h1 { font-size: 1.5rem; }
             .card { padding: 1.5rem; }
         }
     </style>
@@ -111,8 +120,10 @@
 <body>
 
 <header>
-    <img src="56c8001a-c812-4415-a58e-2f5f8da6534d.jpeg" alt="University Logo" class="logo-uhb">
-    <img src="7c637ea8-854c-4828-af66-8cd7d48635df.jpeg" alt="Nursing Logo" class="logo-nursing">
+    <div class="header-top">
+        <img src="56c8001a-c812-4415-a58e-2f5f8da6534d.jpeg" alt="University Logo" class="logo-uhb">
+        <img src="7c637ea8-854c-4828-af66-8cd7d48635df.jpeg" alt="Nursing Logo" class="logo-nursing">
+    </div>
 
     <h1>Infection Control in Nursing Platform</h1>
     <p>Ensuring patient and staff safety through professional practice</p>
