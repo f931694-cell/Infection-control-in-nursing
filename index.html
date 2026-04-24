@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infection Control in Nursing | UHB</title>
+    <title>Infection Control Nursing Platform</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -23,26 +23,27 @@
 
         header {
             background-color: #FFF;
-            padding: 100px 20px 40px 20px; 
+            /* مساحة علوية للشعارات */
+            padding: 100px 1.5rem 3rem 1.5rem;
             text-align: center;
             border-bottom: 5px solid var(--primary-color);
             box-shadow: 0 4px 6px rgba(0,0,0,0.03);
             position: relative;
         }
 
-        /* تنسيق الشعارات في الأطراف العلوية */
-        .logo-uhb, .logo-nursing {
+        /* تنسيق الشعارات في الزوايا العلوية */
+        .logo-left, .logo-right {
             position: absolute;
-            top: 20px;
+            top: 15px;
             height: 80px;
             width: auto;
             object-fit: contain;
         }
+        .logo-left { left: 20px; }
+        .logo-right { right: 20px; }
 
-        .logo-uhb { left: 25px; }
-        .logo-nursing { right: 25px; }
-
-        header h1 { margin: 0; font-size: 2.5rem; color: var(--dark-blue); font-weight: 700; }
+        header h1 { margin: 0; font-size: 2.2rem; color: var(--dark-blue); font-weight: 700; }
+        header p { color: #666; margin-top: 10px; }
         
         .prepared-by {
             margin-top: 25px;
@@ -52,55 +53,74 @@
             border-radius: 12px;
             border: 1px solid #d1e9ff;
             text-align: left;
+            min-width: 250px;
         }
-        .prepared-by b { display: block; color: var(--dark-blue); margin-bottom: 10px; border-bottom: 1px dotted #d1e9ff; }
+        .prepared-by b { display: block; color: var(--dark-blue); margin-bottom: 10px; border-bottom: 1px solid #d1e9ff; padding-bottom: 5px; }
+        .prepared-by div { font-size: 1.05rem; line-height: 1.8; color: #444; }
 
         .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
 
         .card {
             background: #FFF;
-            border-radius: 15px;
+            border-radius: 12px;
             padding: 2.5rem;
             margin-bottom: 2rem;
+            border: 1px solid #eee;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
-        h2 { color: var(--primary-color); border-bottom: 3px solid #eee; padding-bottom: 10px; }
-        h3 { color: var(--dark-blue); margin-top: 1.5rem; }
+        h2 { color: var(--primary-color); border-bottom: 3px solid #eee; padding-bottom: 12px; margin-top: 0; }
+        h3 { color: var(--dark-blue); margin-top: 1.8rem; font-size: 1.2rem; }
+        ul { padding-left: 1.5rem; list-style-type: none; }
+        li { margin-bottom: 0.8rem; position: relative; padding-left: 1.2rem; }
+        li::before { content: '•'; color: var(--primary-color); font-size: 1.5rem; position: absolute; left: 0; top: -0.2rem; }
 
+        /* تنسيق الفيديو */
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 12px;
+            border-radius: 10px;
             margin-top: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-
         .video-wrapper iframe {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%; border: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
 
-        ul { padding-left: 1.5rem; }
-        li { margin-bottom: 0.8rem; }
+        .message-box {
+            background-color: #E3F2FD;
+            border-left: 6px solid var(--primary-color);
+            padding: 1.8rem;
+            border-radius: 10px;
+            font-style: italic;
+            margin: 2rem 0;
+        }
 
-        .footer { text-align: center; padding: 3rem; color: #888; border-top: 1px solid #eee; }
+        .footer { text-align: center; padding: 3rem 1rem; color: #888; font-size: 0.9rem; border-top: 1px solid #eee; margin-top: 4rem; }
         
-        @media (max-width: 768px) {
-            header { padding: 80px 10px 30px 10px; }
-            .logo-uhb, .logo-nursing { height: 55px; }
-            header h1 { font-size: 1.8rem; }
+        @media (max-width: 600px) {
+            header { padding-top: 80px; }
+            .logo-left, .logo-right { height: 55px; }
+            header h1 { font-size: 1.7rem; }
+            .card { padding: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="uhb_logo.png" alt="University Logo" class="logo-uhb">
-    <img src="nursing_logo.png" alt="Nursing Logo" class="logo-nursing">
+    <img src="IMG_6203.jpeg" alt="University Logo" class="logo-left">
+    <img src="IMG_6202.jpeg" alt="Nursing Logo" class="logo-right">
 
-    <h1>Infection Control in Nursing Practice</h1>
+    <h1>Infection Control in Nursing Platform</h1>
+    <p>Ensuring patient and staff safety through professional practice</p>
     
     <div class="prepared-by">
         <b>Prepared by:</b>
@@ -117,36 +137,81 @@
 <div class="container">
     
     <div class="card">
-        <h2>About The Project</h2>
-        <p>Infection control is a fundamental aspect of nursing care designed to prevent the spread of microorganisms in healthcare settings. This platform provides essential resources for nursing students to maintain a safe clinical environment.</p>
-    </div>
-
-    <div class="card">
-        <h2>Professional Training (BICSL)</h2>
-        <p>Basic Infection Control Skills License (BICSL) training video:</p>
+        <h2>Professional Training Video</h2>
+        <p>Watch the Basic Infection Control Skills License (BICSL) training video:</p>
         <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/bwjA_fGQOFY" allowfullscreen></iframe>
         </div>
     </div>
 
     <div class="card">
-        <h2>Core Guidelines</h2>
-        <h3>1. Hand Hygiene</h3>
+        <h2>Home Page</h2>
+        <p>Welcome to the Infection Control in Nursing Platform. This website is designed to support nurses in preventing and controlling infections in healthcare settings.</p>
+        <div class="message-box">
+            "Infection control is an essential part of nursing practice. Proper adherence to guidelines helps save lives and improve healthcare quality."
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>About Infection Control</h2>
+        <p>Infection control refers to the policies and procedures used to reduce the spread of infections in hospitals and healthcare environments.</p>
+        <h3>Importance:</h3>
         <ul>
-            <li>Wash hands for 40-60 seconds with soap and water.</li>
-            <li>Use alcohol-based hand rub for 20-30 seconds.</li>
+            <li>Protects patients and healthcare workers</li>
+            <li>Reduces hospital-acquired infections (HAIs)</li>
+            <li>Improves quality of care</li>
         </ul>
-        <h3>2. Personal Protective Equipment (PPE)</h3>
+    </div>
+
+    <div class="card">
+        <h2>Guidelines</h2>
+        
+        <h3>Hand Hygiene</h3>
         <ul>
-            <li><b>Donning Sequence:</b> Gown → Mask → Goggles → Gloves.</li>
-            <li><b>Doffing Sequence:</b> Gloves → Goggles → Gown → Mask.</li>
+            <li>Wash hands before and after patient contact</li>
+            <li>Use alcohol-based hand sanitizers</li>
+        </ul>
+
+        <h3>Personal Protective Equipment (PPE)</h3>
+        <ul>
+            <li>Use gloves, masks, and gowns when necessary</li>
+            <li>Follow standard precautions</li>
+        </ul>
+
+        <h3>Sterilization and Disinfection</h3>
+        <ul>
+            <li>Properly clean and disinfect medical equipment</li>
+            <li>Follow hospital protocols</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Nurses’ Compliance</h2>
+        <p>Compliance refers to how well nurses follow infection control guidelines.</p>
+        
+        <h3>Factors affecting compliance:</h3>
+        <ul>
+            <li>Lack of training</li>
+            <li>Work overload</li>
+            <li>Limited resources</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Self-Assessment</h2>
+        <p><b>Ask yourself:</b></p>
+        <ul>
+            <li>Do I perform hand hygiene regularly?</li>
+            <li>Do I use PPE correctly?</li>
+            <li>Do I follow infection control protocols?</li>
         </ul>
     </div>
 
 </div>
 
 <div class="footer">
-    &copy; 2026 University of Hafr Al Batin | College of Nursing
+    &copy; 2026 University of Hafr Al Batin | College of Nursing <br>
+    Infection Control Nursing Platform
 </div>
 
 </body>
