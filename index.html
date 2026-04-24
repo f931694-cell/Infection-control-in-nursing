@@ -29,27 +29,26 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.03);
         }
 
-        /* تنسيق الشعارات */
         .logo-container {
             display: flex;
-            justify-content: center;
-            gap: 30px;
+            justify-content: space-between;
             align-items: center;
             max-width: 900px;
             margin: 0 auto 1.5rem auto;
+            padding: 0 1rem;
         }
 
         .logo-container img {
-            height: 90px; /* زيادة حجم الشعار قليلاً */
+            height: 90px;
             width: auto;
             object-fit: contain;
         }
 
-        header h1 { margin: 10px 0; font-size: 2rem; color: var(--dark-blue); font-weight: 700; }
+        header h1 { margin: 15px 0; font-size: 2rem; color: var(--dark-blue); font-weight: 700; }
         
         .prepared-by {
             margin-top: 20px;
-            padding: 15px;
+            padding: 20px;
             background: #f0f7ff;
             display: inline-block;
             border-radius: 12px;
@@ -57,7 +56,7 @@
             text-align: left;
         }
         .prepared-by b { display: block; color: var(--dark-blue); margin-bottom: 8px; border-bottom: 1px dotted #d1e9ff; }
-        .prepared-by div { font-size: 1rem; color: #444; }
+        .prepared-by div { font-size: 1.1rem; color: #444; }
 
         .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
 
@@ -71,7 +70,6 @@
         }
 
         h2 { color: var(--primary-color); border-bottom: 3px solid #eee; padding-bottom: 10px; margin-top: 0; }
-        h3 { color: var(--dark-blue); margin-top: 1.5rem; font-size: 1.2rem; }
 
         .video-wrapper {
             position: relative;
@@ -80,7 +78,6 @@
             overflow: hidden;
             border-radius: 10px;
             margin-top: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .video-wrapper iframe {
@@ -92,23 +89,10 @@
             border: 0;
         }
 
-        ul { padding-left: 1.5rem; list-style-type: none; }
-        li { margin-bottom: 0.8rem; position: relative; padding-left: 1.2rem; }
-        li::before { content: '•'; color: var(--primary-color); font-size: 1.5rem; position: absolute; left: 0; top: -0.2rem; }
-
-        .message-box {
-            background-color: #E3F2FD;
-            border-left: 6px solid var(--primary-color);
-            padding: 1.8rem;
-            border-radius: 10px;
-            font-style: italic;
-            margin: 2rem 0;
-        }
-
         .footer { text-align: center; padding: 3rem; color: #888; font-size: 0.85rem; border-top: 1px solid #eee; }
         
         @media (max-width: 600px) {
-            .logo-container img { height: 60px; }
+            .logo-container img { height: 65px; }
             header h1 { font-size: 1.5rem; }
         }
     </style>
@@ -117,7 +101,8 @@
 
 <header>
     <div class="logo-container">
-        <img src="https://upload.wikimedia.org/wikipedia/ar/0/00/University_of_Hafr_Al_Batin_logo.png" alt="University Logo">
+        <img src="IMG_6203.jpeg" alt="University Logo">
+        <img src="IMG_6202.jpeg" alt="Nursing Logo">
     </div>
 
     <h1>Infection Control Nursing Platform</h1>
@@ -138,53 +123,14 @@
     
     <div class="card">
         <h2>Professional Training (BICSL)</h2>
-        <p>Watch the Basic Infection Control Skills License (BICSL) training video to understand core protocols:</p>
         <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/bwjA_fGQOFY" allowfullscreen></iframe>
         </div>
     </div>
 
     <div class="card">
-        <h2>Home & About</h2>
-        <p>Welcome to our professional platform. Infection control is a cornerstone of modern nursing care, aiming to reduce microbial transmission and ensure the safety of both patients and healthcare providers.</p>
-        <div class="message-box">
-            "Adhering to infection control guidelines is not just a duty; it's a commitment to saving lives."
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Key Guidelines</h2>
-        <h3>Hand Hygiene</h3>
-        <ul>
-            <li>Wash hands before and after patient contact.</li>
-            <li>Use alcohol-based rub for 20-30 seconds if hands aren't visibly soiled.</li>
-        </ul>
-
-        <h3>Personal Protective Equipment (PPE)</h3>
-        <ul>
-            <li><b>Donning:</b> Gown → Mask → Goggles → Gloves.</li>
-            <li><b>Doffing:</b> Gloves → Goggles → Gown → Mask.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Common Healthcare Infections</h2>
-        <ul>
-            <li>Urinary Tract Infections (UTI).</li>
-            <li>Surgical Site Infections (SSI).</li>
-            <li>Respiratory and Bloodstream infections.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Nurses’ Compliance</h2>
-        <p>Compliance refers to how strictly healthcare staff follow established protocols.</p>
-        <h3>Improving Compliance:</h3>
-        <ul>
-            <li>Ongoing professional training and workshops.</li>
-            <li>Ensuring constant availability of PPE and sanitizers.</li>
-            <li>Regular monitoring and feedback.</li>
-        </ul>
+        <h2>About Infection Control</h2>
+        <p>This academic platform is designed to improve compliance with infection control standards in nursing practice. Safety is our priority.</p>
     </div>
 
 </div>
