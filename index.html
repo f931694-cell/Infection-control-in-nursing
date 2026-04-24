@@ -21,14 +21,35 @@
             line-height: 1.7;
         }
 
+        /* تنسيق الهيدر */
         header {
             background-color: #FFF;
-            padding: 3rem 1.5rem;
+            /* مساحة من الأعلى والأسفل */
+            padding: 90px 20px 30px 20px; 
             text-align: center;
             border-bottom: 5px solid var(--primary-color);
             box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            position: relative; /* مهم جداً لوضع الشعارات في الأطراف */
         }
 
+        /* تنسيق الشعارات في الأطراف العلوية */
+        .logo-uhb, .logo-nursing {
+            position: absolute;
+            top: 15px; /* المسافة من الأعلى */
+            height: 75px; /* حجم مناسب للشعارات في الزاوية */
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-uhb {
+            left: 20px; /* شعار الجامعة في أقصى اليسار */
+        }
+
+        .logo-nursing {
+            right: 20px; /* شعار الكلية في أقصى اليمين */
+        }
+
+        /* تنسيق العنوان والأسماء */
         header h1 { margin: 0; font-size: 2.2rem; color: var(--dark-blue); font-weight: 700; }
         header p { color: #666; margin-top: 10px; font-size: 1.1rem; }
         
@@ -61,7 +82,7 @@
 
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* 16:9 ratio */
             height: 0;
             overflow: hidden;
             border-radius: 10px;
@@ -88,8 +109,11 @@
 
         .footer { text-align: center; padding: 3rem 1rem; color: #888; font-size: 0.9rem; border-top: 1px solid #eee; margin-top: 4rem; }
         
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.7rem; }
+        /* تنسيق خاص للجوال لضمان عدم تداخل العناصر */
+        @media (max-width: 768px) {
+            header { padding: 80px 10px 25px 10px; }
+            .logo-uhb, .logo-nursing { height: 55px; }
+            header h1 { font-size: 1.6rem; }
             .card { padding: 1.5rem; }
         }
     </style>
@@ -97,6 +121,9 @@
 <body>
 
 <header>
+    <img src="IMG_6203.jpeg" alt="University Logo" class="logo-uhb">
+    <img src="IMG_6202.jpeg" alt="Nursing Logo" class="logo-nursing">
+
     <h1>Infection Control in Nursing Platform</h1>
     <p>Ensuring patient and staff safety through professional practice</p>
     
