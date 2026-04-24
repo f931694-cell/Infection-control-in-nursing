@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infection Control in Nursing | UHB</title>
+    <title>Infection Control Nursing Platform | UHB</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #2196F3;
             --dark-blue: #1565C0;
-            --uhb-maroon: #802c2e;
             --light-bg: #F8FBFE;
             --text-color: #333;
         }
@@ -24,76 +23,63 @@
 
         header {
             background-color: #FFF;
-            /* تم تعديل Padding ليكون أقل من الأعلى لإفساح مجال للشعارات */
-            padding: 1rem 1rem 2rem 1rem; 
+            padding: 100px 20px 40px 20px; 
             text-align: center;
             border-bottom: 5px solid var(--primary-color);
             box-shadow: 0 4px 6px rgba(0,0,0,0.03);
-            position: relative; /* مهم لترتيب العناصر داخل الهيدر */
+            position: relative;
         }
 
-        /* تنسيق الأطراف: دفع الشعارات لأقصى اليمين واليسار */
-        .logo-container {
-            display: flex;
-            justify-content: space-between; /* هذا ما يدفع العناصر للأطراف */
-            align-items: center;
-            max-width: 100%; /* يستخدم كامل عرض الهيدر */
-            margin: 0;
-            padding: 0 10px;
-            position: absolute; /* يضع الشعارات فوق المحتوى */
-            top: 10px; /* المسافة من أعلى الصفحة */
-            left: 0;
-            right: 0;
-        }
-
-        .logo-container img {
-            height: 75px; /* حجم مناسب ليكون في الزاوية */
+        /* تنسيق الشعارات في الأطراف العلوية */
+        .logo-uhb, .logo-nursing {
+            position: absolute;
+            top: 20px;
+            height: 80px;
             width: auto;
             object-fit: contain;
         }
 
-        /* تنسيق العنوان والأسماء لضمان عدم تداخلها مع الشعارات */
-        .header-content {
-            margin-top: 85px; /* مساحة كافية تحت الشعارات */
-        }
+        .logo-uhb { left: 30px; } /* شعار الجامعة يسار */
+        .logo-nursing { right: 30px; } /* شعار الكلية يمين */
 
-        header h1 { margin: 10px 0; font-size: 2.2rem; color: var(--dark-blue); font-weight: 700; }
+        header h1 { margin: 0; font-size: 2.5rem; color: var(--dark-blue); font-weight: 700; }
         
         .prepared-by {
-            margin-top: 20px;
-            padding: 20px;
+            margin-top: 30px;
+            padding: 25px;
             background: #f0f7ff;
             display: inline-block;
-            border-radius: 12px;
+            border-radius: 15px;
             border: 1px solid #d1e9ff;
             text-align: left;
-            min-width: 250px;
+            min-width: 300px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
         }
-        .prepared-by b { display: block; color: var(--dark-blue); margin-bottom: 10px; border-bottom: 1px dotted #d1e9ff; padding-bottom: 5px; }
-        .prepared-by div { font-size: 1.1rem; line-height: 1.8; color: #444; }
+        .prepared-by b { display: block; color: var(--dark-blue); margin-bottom: 12px; border-bottom: 2px solid #d1e9ff; padding-bottom: 5px; font-size: 1.2rem; }
+        .prepared-by div { font-size: 1.15rem; line-height: 1.9; color: #444; }
 
-        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        .container { max-width: 1000px; margin: 3rem auto; padding: 0 1.5rem; }
 
         .card {
             background: #FFF;
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
+            border-radius: 15px;
+            padding: 3rem;
+            margin-bottom: 2.5rem;
             border: 1px solid #eee;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
         }
 
-        h2 { color: var(--primary-color); border-bottom: 3px solid #eee; padding-bottom: 10px; margin-top: 0; }
-        h3 { color: var(--dark-blue); margin-top: 1.8rem; font-size: 1.2rem; }
+        h2 { color: var(--primary-color); border-bottom: 3px solid #f0f0f0; padding-bottom: 15px; margin-top: 0; font-size: 1.8rem; }
+        h3 { color: var(--dark-blue); margin-top: 2rem; font-size: 1.4rem; border-left: 4px solid var(--primary-color); padding-left: 15px; }
 
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 10px;
-            margin-top: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         .video-wrapper iframe {
@@ -105,26 +91,28 @@
             border: 0;
         }
 
-        ul { padding-left: 1.5rem; list-style-type: none; }
-        li { margin-bottom: 0.8rem; position: relative; padding-left: 1.2rem; }
-        li::before { content: '•'; color: var(--primary-color); font-size: 1.5rem; position: absolute; left: 0; top: -0.2rem; }
+        p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+        ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        li { margin-bottom: 1rem; position: relative; padding-left: 1.5rem; font-size: 1.05rem; list-style: none; }
+        li::before { content: '✔'; color: #4CAF50; font-weight: bold; position: absolute; left: 0; }
 
-        .message-box {
-            background-color: #E3F2FD;
-            border-left: 6px solid var(--primary-color);
-            padding: 1.8rem;
-            border-radius: 10px;
-            font-style: italic;
+        .important-note {
+            background-color: #FFF9C4;
+            border-right: 6px solid #FBC02D;
+            padding: 1.5rem;
+            border-radius: 8px;
             margin: 2rem 0;
+            font-weight: 500;
         }
 
-        .footer { text-align: center; padding: 3rem; color: #888; font-size: 0.85rem; border-top: 1px solid #eee; }
+        .footer { text-align: center; padding: 4rem; color: #777; font-size: 1rem; border-top: 1px solid #eee; background: #fff; }
         
         @media (max-width: 768px) {
-            .logo-container { padding: 0 5px; }
-            .logo-container img { height: 55px; } /* تصغير الشعارات قليلاً على الجوال */
-            .header-content { margin-top: 65px; }
-            header h1 { font-size: 1.6rem; }
+            header { padding: 80px 15px 30px 15px; }
+            .logo-uhb, .logo-nursing { height: 55px; top: 15px; }
+            .logo-uhb { left: 15px; }
+            .logo-nursing { right: 15px; }
+            header h1 { font-size: 1.8rem; }
             .card { padding: 1.5rem; }
         }
     </style>
@@ -132,23 +120,19 @@
 <body>
 
 <header>
-    <div class="logo-container">
-        <img src="IMG_6203.jpeg" alt="University Logo">
-        <img src="IMG_6202.jpeg" alt="Nursing Logo">
-    </div>
+    <img src="IMG_6203.jpeg" alt="University of Hafr Al Batin" class="logo-uhb">
+    <img src="IMG_6202.jpeg" alt="College of Nursing" class="logo-nursing">
 
-    <div class="header-content">
-        <h1>Infection Control Nursing Platform</h1>
-        
-        <div class="prepared-by">
-            <b>Prepared by:</b>
-            <div>
-                • فوز سعد الظفيري <br>
-                • ريماس محمد الشحيتان <br>
-                • غادة علي المطيري <br>
-                • رانيا عسيري <br>
-                • انوار محمد
-            </div>
+    <h1>Infection Control Nursing Platform</h1>
+    
+    <div class="prepared-by">
+        <b>Prepared by:</b>
+        <div>
+            • فوز سعد الظفيري <br>
+            • ريماس محمد الشحيتان <br>
+            • غادة علي المطيري <br>
+            • رانيا عسيري <br>
+            • انوار محمد
         </div>
     </div>
 </header>
@@ -157,38 +141,65 @@
     
     <div class="card">
         <h2>Professional Training (BICSL)</h2>
-        <p>Watch the Basic Infection Control Skills License (BICSL) training video to understand core protocols:</p>
+        <p>The Basic Infection Control Skills License (BICSL) is essential for all healthcare providers to ensure a safe environment for patients and staff. Watch the comprehensive training below:</p>
         <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/bwjA_fGQOFY" allowfullscreen></iframe>
         </div>
-    </div>
-
-    <div class="card">
-        <h2>About Infection Control</h2>
-        <p>This comprehensive platform is dedicated to promoting safety, education, and compliance with infection control standards in nursing practice. Safety is our priority.</p>
-        <div class="message-box">
-            "Correct adherence to guidelines helps save lives and improve healthcare quality."
+        <div class="important-note">
+            Note: All nursing students must demonstrate competency in these skills before clinical placement.
         </div>
     </div>
 
     <div class="card">
-        <h2>Key Guidelines</h2>
-        <h3>Hand Hygiene</h3>
+        <h2>What is Infection Control?</h2>
+        <p>Infection control is a practical, evidence-based approach which prevents patients and health workers from being harmed by avoidable infection. It is a fundamental part of nursing care and clinical excellence.</p>
+        
+        <h3>Standard Precautions</h3>
         <ul>
-            <li>Wash hands before and after patient contact.</li>
-            <li>Use alcohol-based rub if hands are not visibly soiled.</li>
+            <li><b>Hand Hygiene:</b> The most important measure to prevent the spread of pathogens.</li>
+            <li><b>Personal Protective Equipment (PPE):</b> Proper use of gloves, gowns, masks, and eye protection.</li>
+            <li><b>Respiratory Hygiene:</b> Cough etiquette and source control.</li>
+            <li><b>Waste Management:</b> Safe disposal of clinical and sharp waste.</li>
         </ul>
-        <h3>PPE Usage</h3>
+
+        <h3>Transmission-Based Precautions</h3>
+        <p>Used for patients who are known or suspected to be infected with highly transmissible pathogens:</p>
         <ul>
-            <li>Follow the proper sequence for Donning and Doffing.</li>
+            <li>Contact Precautions (e.g., MRSA, VRE).</li>
+            <li>Droplet Precautions (e.g., Influenza, Pertussis).</li>
+            <li>Airborne Precautions (e.g., Tuberculosis, Measles).</li>
         </ul>
+    </div>
+
+    <div class="card">
+        <h2>PPE Donning & Doffing Sequence</h2>
+        <p>Correctly putting on (donning) and taking off (doffing) PPE is critical to avoid self-contamination.</p>
+        
+        <h3>The Donning Sequence (Putting On):</h3>
+        <ol>
+            <li>Perform Hand Hygiene.</li>
+            <li>Put on the Gown.</li>
+            <li>Put on the Mask or Respirator.</li>
+            <li>Put on Goggles or Face Shield.</li>
+            <li>Put on Gloves.</li>
+        </ol>
+
+        <h3>The Doffing Sequence (Taking Off):</h3>
+        <ol>
+            <li>Remove Gloves.</li>
+            <li>Remove Gown.</li>
+            <li>Perform Hand Hygiene.</li>
+            <li>Remove Goggles or Face Shield.</li>
+            <li>Remove Mask.</li>
+            <li>Perform Hand Hygiene again.</li>
+        </ol>
     </div>
 
 </div>
 
 <div class="footer">
     &copy; 2026 University of Hafr Al Batin | College of Nursing <br>
-    Professional Nursing Project
+    Nursing Research & Infection Prevention Project
 </div>
 
 </body>
