@@ -9,6 +9,7 @@
         :root {
             --primary-color: #2196F3;
             --dark-blue: #1565C0;
+            --uhb-maroon: #802c2e;
             --light-bg: #F8FBFE;
             --text-color: #333;
         }
@@ -23,28 +24,40 @@
 
         header {
             background-color: #FFF;
-            padding: 2rem 1.5rem;
+            /* تم تعديل Padding ليكون أقل من الأعلى لإفساح مجال للشعارات */
+            padding: 1rem 1rem 2rem 1rem; 
             text-align: center;
             border-bottom: 5px solid var(--primary-color);
             box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            position: relative; /* مهم لترتيب العناصر داخل الهيدر */
         }
 
+        /* تنسيق الأطراف: دفع الشعارات لأقصى اليمين واليسار */
         .logo-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* هذا ما يدفع العناصر للأطراف */
             align-items: center;
-            max-width: 900px;
-            margin: 0 auto 1.5rem auto;
-            padding: 0 1rem;
+            max-width: 100%; /* يستخدم كامل عرض الهيدر */
+            margin: 0;
+            padding: 0 10px;
+            position: absolute; /* يضع الشعارات فوق المحتوى */
+            top: 10px; /* المسافة من أعلى الصفحة */
+            left: 0;
+            right: 0;
         }
 
         .logo-container img {
-            height: 90px;
+            height: 75px; /* حجم مناسب ليكون في الزاوية */
             width: auto;
             object-fit: contain;
         }
 
-        header h1 { margin: 15px 0; font-size: 2rem; color: var(--dark-blue); font-weight: 700; }
+        /* تنسيق العنوان والأسماء لضمان عدم تداخلها مع الشعارات */
+        .header-content {
+            margin-top: 85px; /* مساحة كافية تحت الشعارات */
+        }
+
+        header h1 { margin: 10px 0; font-size: 2.2rem; color: var(--dark-blue); font-weight: 700; }
         
         .prepared-by {
             margin-top: 20px;
@@ -54,9 +67,10 @@
             border-radius: 12px;
             border: 1px solid #d1e9ff;
             text-align: left;
+            min-width: 250px;
         }
-        .prepared-by b { display: block; color: var(--dark-blue); margin-bottom: 8px; border-bottom: 1px dotted #d1e9ff; }
-        .prepared-by div { font-size: 1.1rem; color: #444; }
+        .prepared-by b { display: block; color: var(--dark-blue); margin-bottom: 10px; border-bottom: 1px dotted #d1e9ff; padding-bottom: 5px; }
+        .prepared-by div { font-size: 1.1rem; line-height: 1.8; color: #444; }
 
         .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
 
@@ -70,14 +84,16 @@
         }
 
         h2 { color: var(--primary-color); border-bottom: 3px solid #eee; padding-bottom: 10px; margin-top: 0; }
+        h3 { color: var(--dark-blue); margin-top: 1.8rem; font-size: 1.2rem; }
 
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* 16:9 ratio */
             height: 0;
             overflow: hidden;
             border-radius: 10px;
             margin-top: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .video-wrapper iframe {
@@ -89,11 +105,27 @@
             border: 0;
         }
 
+        ul { padding-left: 1.5rem; list-style-type: none; }
+        li { margin-bottom: 0.8rem; position: relative; padding-left: 1.2rem; }
+        li::before { content: '•'; color: var(--primary-color); font-size: 1.5rem; position: absolute; left: 0; top: -0.2rem; }
+
+        .message-box {
+            background-color: #E3F2FD;
+            border-left: 6px solid var(--primary-color);
+            padding: 1.8rem;
+            border-radius: 10px;
+            font-style: italic;
+            margin: 2rem 0;
+        }
+
         .footer { text-align: center; padding: 3rem; color: #888; font-size: 0.85rem; border-top: 1px solid #eee; }
         
-        @media (max-width: 600px) {
-            .logo-container img { height: 65px; }
-            header h1 { font-size: 1.5rem; }
+        @media (max-width: 768px) {
+            .logo-container { padding: 0 5px; }
+            .logo-container img { height: 55px; } /* تصغير الشعارات قليلاً على الجوال */
+            .header-content { margin-top: 65px; }
+            header h1 { font-size: 1.6rem; }
+            .card { padding: 1.5rem; }
         }
     </style>
 </head>
@@ -105,16 +137,18 @@
         <img src="IMG_6202.jpeg" alt="Nursing Logo">
     </div>
 
-    <h1>Infection Control Nursing Platform</h1>
-    
-    <div class="prepared-by">
-        <b>Prepared by:</b>
-        <div>
-            • فوز سعد الظفيري <br>
-            • ريماس محمد الشحيتان <br>
-            • غادة علي المطيري <br>
-            • رانيا عسيري <br>
-            • انوار محمد
+    <div class="header-content">
+        <h1>Infection Control Nursing Platform</h1>
+        
+        <div class="prepared-by">
+            <b>Prepared by:</b>
+            <div>
+                • فوز سعد الظفيري <br>
+                • ريماس محمد الشحيتان <br>
+                • غادة علي المطيري <br>
+                • رانيا عسيري <br>
+                • انوار محمد
+            </div>
         </div>
     </div>
 </header>
@@ -123,6 +157,7 @@
     
     <div class="card">
         <h2>Professional Training (BICSL)</h2>
+        <p>Watch the Basic Infection Control Skills License (BICSL) training video to understand core protocols:</p>
         <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/bwjA_fGQOFY" allowfullscreen></iframe>
         </div>
@@ -130,13 +165,30 @@
 
     <div class="card">
         <h2>About Infection Control</h2>
-        <p>This academic platform is designed to improve compliance with infection control standards in nursing practice. Safety is our priority.</p>
+        <p>This comprehensive platform is dedicated to promoting safety, education, and compliance with infection control standards in nursing practice. Safety is our priority.</p>
+        <div class="message-box">
+            "Correct adherence to guidelines helps save lives and improve healthcare quality."
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Key Guidelines</h2>
+        <h3>Hand Hygiene</h3>
+        <ul>
+            <li>Wash hands before and after patient contact.</li>
+            <li>Use alcohol-based rub if hands are not visibly soiled.</li>
+        </ul>
+        <h3>PPE Usage</h3>
+        <ul>
+            <li>Follow the proper sequence for Donning and Doffing.</li>
+        </ul>
     </div>
 
 </div>
 
 <div class="footer">
-    &copy; 2026 University of Hafr Al Batin | College of Nursing
+    &copy; 2026 University of Hafr Al Batin | College of Nursing <br>
+    Professional Nursing Project
 </div>
 
 </body>
