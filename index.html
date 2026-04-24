@@ -29,17 +29,18 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.03);
         }
 
+        /* تنسيق الشعارات */
         .logo-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 30px;
             align-items: center;
             max-width: 900px;
             margin: 0 auto 1.5rem auto;
-            padding: 0 1rem;
         }
 
         .logo-container img {
-            height: 70px;
+            height: 90px; /* زيادة حجم الشعار قليلاً */
             width: auto;
             object-fit: contain;
         }
@@ -107,9 +108,8 @@
         .footer { text-align: center; padding: 3rem; color: #888; font-size: 0.85rem; border-top: 1px solid #eee; }
         
         @media (max-width: 600px) {
-            .logo-container img { height: 50px; }
+            .logo-container img { height: 60px; }
             header h1 { font-size: 1.5rem; }
-            .card { padding: 1.5rem; }
         }
     </style>
 </head>
@@ -117,8 +117,7 @@
 
 <header>
     <div class="logo-container">
-        <img src="https://pbs.twimg.com/profile_images/1165538746761007104/yVw0m-q__400x400.jpg" alt="UHB Logo">
-        <img src="https://pbs.twimg.com/media/Fe1OQ_bX0AI0O7n.jpg" alt="Nursing Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/ar/0/00/University_of_Hafr_Al_Batin_logo.png" alt="University Logo">
     </div>
 
     <h1>Infection Control Nursing Platform</h1>
@@ -163,19 +162,13 @@
 
         <h3>Personal Protective Equipment (PPE)</h3>
         <ul>
-            <li><b>Donning (Putting on):</b> Gown → Mask → Goggles/Face Shield → Gloves.</li>
-            <li><b>Doffing (Taking off):</b> Gloves → Goggles → Gown → Mask.</li>
-        </ul>
-
-        <h3>Sterilization</h3>
-        <ul>
-            <li>Follow hospital protocols for disinfecting medical equipment.</li>
-            <li>Ensure safe disposal of sharps and needles.</li>
+            <li><b>Donning:</b> Gown → Mask → Goggles → Gloves.</li>
+            <li><b>Doffing:</b> Gloves → Goggles → Gown → Mask.</li>
         </ul>
     </div>
 
     <div class="card">
-        <h2>Common Healthcare-Associated Infections</h2>
+        <h2>Common Healthcare Infections</h2>
         <ul>
             <li>Urinary Tract Infections (UTI).</li>
             <li>Surgical Site Infections (SSI).</li>
@@ -190,24 +183,14 @@
         <ul>
             <li>Ongoing professional training and workshops.</li>
             <li>Ensuring constant availability of PPE and sanitizers.</li>
-            <li>Regular monitoring and feedback from supervisors.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Academic Resources</h2>
-        <ul>
-            <li>World Health Organization (WHO) Standards.</li>
-            <li>CDC Infection Control Guidelines.</li>
-            <li>University of Hafr Al Batin Nursing Department Protocols.</li>
+            <li>Regular monitoring and feedback.</li>
         </ul>
     </div>
 
 </div>
 
 <div class="footer">
-    &copy; 2026 University of Hafr Al Batin | College of Nursing <br>
-    Professional Nursing Project
+    &copy; 2026 University of Hafr Al Batin | College of Nursing
 </div>
 
 </body>
